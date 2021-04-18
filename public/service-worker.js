@@ -1,17 +1,20 @@
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
+const FILES_TO_CACHE = [
+    './',
+    './index.html',
+    './styles.css',
+];
 //  install event handler
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-      caches.open('static').then((cache) => {
-        return cache.addAll([
-          './',
-          './index.html',
-          './styles.css',
-        ]);
+// install
+self.addEventListener("install", function(evt) {
+    evt.waitUntil(
+      caches.open(CACHE_NAME).then(cache => {
+        console.log("Your files were pre-cached successfully!");
+        return cache.addAll(FILES_TO_CACHE);
       })
     );
-    console.log('Install');
+  
     self.skipWaiting();
   });
   
@@ -63,7 +66,7 @@ self.addEventListener('install', (event) => {
       caches.match(evt.request).then(function(response) {
         return response || fetch(evt.request);
       })
-      .catch(err => console.log(err))
+    //   .catch(err => console.log(err))
     );
   });
   
