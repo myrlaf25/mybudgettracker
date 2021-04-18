@@ -3,7 +3,7 @@ const Transaction = require("../models/transaction.js");
 const path = require("path");
 
 
-router.post("/api/transaction", ({body}, res) => {
+router.post("/transaction", ({body}, res) => {
   Transaction.create(body)
     .then(dbTransaction => {
       res.json(dbTransaction);
