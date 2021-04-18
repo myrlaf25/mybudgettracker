@@ -63,6 +63,7 @@ self.addEventListener('install', (event) => {
       caches.match(evt.request).then(function(response) {
         return response || fetch(evt.request);
       })
+      .catch(err => console.log(err))
     );
   });
   
