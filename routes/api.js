@@ -7,6 +7,7 @@ router.post("/api/transaction", ({ body }, res) => {
       res.json(dbTransaction);
     })
     .catch(err => {
+        console.log(err)
       res.status(400).json(err);
     });
 });
