@@ -1,4 +1,4 @@
-## Mu Budget Tracker
+## My Budget Tracker
 
 # Link to deployed website:
 https://mybudgettracker-mf.herokuapp.com/
