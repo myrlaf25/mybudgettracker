@@ -23,10 +23,12 @@ This is a budget tracker application. The front end code was provided by Trilogy
 # User Story
 * As a user and an avid traveller
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
+SO THAT my account balance is accurate, when I am traveling.
+    # PWA-Budget Tracker
+<img src='PWA-budgettracker.png' alt='photo holder'></img>
 
 ## Business Context
-The user will ahve access to track their money, allowing them to access that information anytime, either online or offline. 
+The user will have access to track their money, allowing them to access that information anytime, either online or offline. 
 
 ## Installation
 The user will have to install the following: compression, express, lite-server, mongoose, morgan. Morgan will show the user the log of all commands in the terminal such as GET and POST. The app is using IndexedDB for the offline functionality. The app was deployed using MongoDB Atlas and Heroku. 
