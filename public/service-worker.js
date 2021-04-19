@@ -7,9 +7,7 @@ const FILES_TO_CACHE = [
     '../icons/icon-192x192.png',
     '../icons/icon-512x512.png',
     './db.js',
-    './index.js',
-    '././api.js'
-
+    './index.js'
 ];
 //  install event handler
 // install
